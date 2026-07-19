@@ -1,0 +1,12 @@
+{
+  "enderman_pickup": {
+    "subtitle": "subtitle.zyncraft.enderman_pickup",
+    "sounds": [
+      { "name": "zyncraft:yoink_1", "volume": 1.0, "pitch": 1.0 },
+      { "name": "zyncraft:yoink_2", "volume": 1.0, "pitch": 1.0 },
+      { "name": "zyncraft:yoink_3", "volume": 1.0, "pitch": 1.0 },
+      { "name": "zyncraft:yoink_4", "volume": 1.0, "pitch": 1.0 },
+      { "name": "zyncraft:yoink_5", "volume": 1.0, "pitch": 1.0 }
+    ]
+  }
+}

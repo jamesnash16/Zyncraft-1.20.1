@@ -15,6 +15,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 import uk.nashhost.zyncraft.item.ModItems;
+import uk.nashhost.zyncraft.network.ModNetworking;
+import uk.nashhost.zyncraft.sounds.ModSounds;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(Zyncraft.MOD_ID)
@@ -33,13 +35,8 @@ public class Zyncraft
         MinecraftForge.EVENT_BUS.register(this);
 
         ModItems.register(modEventBus);
-        // The Enderman rework (goals, EndermanRadius, networking, custom rendering)
-        // and its sound effects are still 1.21.1-only at this point - they rely on
-        // Attributes.SCALE (added in 1.20.5, doesn't exist here) and on Forge's
-        // newer networking API (ChannelBuilder, changed shape around 1.20.2). Both
-        // need real porting work, not just a recompile - see the 1.21.1 project's
-        // ModNetworking/EndermanRadius for what has to be adapted before they can
-        // be registered here too.
+        ModSounds.register(modEventBus);
+        ModNetworking.register();
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
